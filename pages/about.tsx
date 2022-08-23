@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function About(){
   return (
-    <div>
+    <div className="pt-4">
       <Head>
         <title>Sobre</title>
       </Head>
