@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.socialLink {
-	@apply w-16 h-16
+.active {
+	@apply -left-[15px] absolute
 }
