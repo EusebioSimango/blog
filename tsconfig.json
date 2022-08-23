@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -15,15 +15,16 @@
     "esModuleInterop": true,
     "module": "esnext",
     // "resolveJsonModule": true,
-    "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+    "moduleResolution": "node", /* Specify how TypeScript looks up a file from a given module specifier. */
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "resolveJsonModule": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "tailwind.config.js"  ],
   "exclude": [
     "node_modules"
   ]
