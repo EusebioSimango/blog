@@ -11,7 +11,7 @@ export default function Home(){
 				<meta name="description" content="A vida de um nerd adolescente em Moçambique" />
 			</Head>
 			<Navbar />
-			<div className='pt-20'>
+			<div className='pt-20 px-4'>
 				<h1 className="text-purple-500 bg-blue-200">Hello, world!</h1>
 				<Link href={"about"}>About</Link>
 			</div>
