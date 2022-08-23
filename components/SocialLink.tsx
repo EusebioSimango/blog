@@ -1,7 +1,5 @@
-import Link from 'next/link'
-
 interface SocialLinkProps {
-	url: String,
+	url: string,
 	icon: any
 }
 

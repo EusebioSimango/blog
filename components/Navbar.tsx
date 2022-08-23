@@ -14,7 +14,7 @@ export default function Navbar(){
         onClick={toggleMenu}
         className='w-7 h-7 absolute top-[18px] left-2 cursor-pointer'
       />
-      <h1 className="text-red-500 text-2xl">VENUS</h1>
+      <h1 className="text-red-500 text-2xl">GINIUSS</h1>
     </div>
   )
 }

@@ -7,7 +7,7 @@ export default function Home(){
 	return (
 		<div>
 			<Head>
-				<title>Eusébio Simango</title>
+				<title>GINIUSS</title>
 				<meta name="description" content="A vida de um nerd adolescente em Moçambique" />
 			</Head>
 			<Navbar />

@@ -13,11 +13,11 @@ export default function About(){
       <Navbar />
       <div className="pt-20 px-4">
         <Head>
-          <title>Sobre</title>
+          <title>GINIUSS - Sobre</title>
         </Head>
         <h1 className='text-gray-1000 text-3xl mb-10'>Sobre</h1>
         <div className="flex flex-wrap">
-          <div className="flex flex-col items-center justify-center gap-2 w-[100vw] md:w-[300px]">
+          <div className="flex flex-col items-center justify-center gap-2 w-[100vw] md:w-[330px]">
             <div className='rounded-full w-[200px] h-[200px] overflow-hidden'>
               <Image className='w-full h-full' alt="Eusebio's Avatar" src={Avatar}/>
             </div>
@@ -33,7 +33,7 @@ export default function About(){
               <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <GoogleLogo className="w-12 h-12"/> }/>
             </div>
           </div>
-          <div className="md:mt-20 md:w-[calc(100vw-350px)]">
+          <div className="md:mt-20 md:w-[calc(100vw-380px)]">
             <p className="text-gray-700 ">
               Meu nome é <a href={"https://github.com/EusebioSimango"} className="bg-gray-1000">Eusébio Simango</a>, e eu sou um adolescente moçambicano apaixonado por programação, tecnologia e ciência. Neste blog vou falar sobre a minha vida, dificuldades que encontrei na minha vida pessoal e profissional, toda minha jornada no mundo do desenvolvimeno de software.
             </p>
