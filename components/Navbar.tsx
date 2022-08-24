@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import Menu from './Menu'
 
 export default function Navbar(){
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
   const [isMenuActive, setIsMenuActive] = useState<boolean>(false)
 
   useEffect(() => {
@@ -21,13 +20,13 @@ export default function Navbar(){
 
   console.log("Renderizou")
   return (
-    <div className="absolute p-4 left-0 top-0 w-[100vw] text-center">
+    <div className="absolute p-4 isDarkMode={isDarkMode}left-0 top-0 w-[100vw] text-center">
       <List 
         onClick={toggleMenu}
         className='w-8 h-8 absolute top-[14px] left-2 cursor-pointer'
       />
       <h1 className="text-red-500 text-2xl">GINIUSS</h1>
-      <Menu isDarkMode={isDarkMode}/>
+      <Menu />
     </div>
   )
 }
