@@ -1,9 +1,11 @@
+import { gql } from '@apollo/client'
 import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import  client  from '../apolloClient'
 
-
-export default function Home(){
+export default function Home({posts}){
+	console.log(posts)
 	return (
 		<div>
 			<Head>
@@ -12,9 +14,34 @@ export default function Home(){
 			</Head>
 			<Navbar />
 			<div className='pt-20 px-4'>
-				<h1 className="text-purple-500 bg-blue-200">Hello, world!</h1>
-				<Link href={"about"}>About</Link>
+				{posts.map( (post, i) => <a href={`/posts/${post.slug}`} key={i}>{post.title}</a>)}
 			</div>
 		</div>    
 	)
+}
+
+export async function getStaticProps(){
+	const {data} = await client.query({
+		query: gql`
+			query { 
+			  posts {
+			    title
+			    slug
+			    postDate
+			    coverImage {
+			      url
+			    }
+			    postContent {
+			      html
+			    }
+			  }
+			}
+		`
+	})
+	const { posts } = data
+	return {
+		props: {
+			posts
+		}
+	}
 }
