@@ -1,6 +1,6 @@
 import React from 'react'
 import { gql } from '@apollo/client'
-import  client  from './../../apolloClient'
+import  client  from '../../apolloClient'
 
 export default function PostPage({post}){
 	console.log(post.postContent)
