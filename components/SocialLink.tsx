@@ -1,3 +1,6 @@
+import { IconProps } from "phosphor-react"
+import { ForwardRefExoticComponent } from 'react'
+
 interface SocialLinkProps {
 	url: string,
 	icon: any

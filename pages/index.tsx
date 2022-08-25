@@ -1,15 +1,20 @@
 import { gql } from '@apollo/client'
 import Head from 'next/head'
-import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import  client  from '../apolloClient'
+import { NextPage } from 'next'
+import { PostType } from './post/[...slug]'
 
-export default function Home({posts}){
+export interface IPosts {
+	posts:	PostType[]
+}
+
+const  Home: NextPage<IPosts > = ({posts}) => {
 	console.log(posts)
 	return (
 		<div>
 			<Head>
-				<title>GINIUSS</title>
+				<title>Giniuss</title>
 				<meta name="description" content="A vida de um nerd adolescente em Moçambique" />
 			</Head>
 			<Navbar />
@@ -21,7 +26,7 @@ export default function Home({posts}){
 }
 
 export async function getStaticProps(){
-	const {data} = await client.query({
+	const {data} = await client.query<IPosts>({
 		query: gql`
 			query { 
 			  posts {
@@ -45,3 +50,5 @@ export async function getStaticProps(){
 		}
 	}
 }
+
+export default Home

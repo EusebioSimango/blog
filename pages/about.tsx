@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react';
 import { GithubLogo, TwitterLogo, LinkedinLogo, InstagramLogo, YoutubeLogo, GoogleLogo } from 'phosphor-react'
@@ -13,7 +12,7 @@ export default function About(){
       <Navbar />
       <div className="pt-20 px-4">
         <Head>
-          <title>GINIUSS - Sobre</title>
+          <title>Giniuss | Sobre</title>
         </Head>
         <h1 className='text-gray-1000 text-3xl mb-10'>Sobre</h1>
         <div className="flex flex-wrap">
@@ -26,20 +25,19 @@ export default function About(){
             <p className="text-gray-400">Web Developer</p>
             <div className="flex flex-row flex-nowrap gap-3 mb-4">
               <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <GithubLogo className="w-12 h-12"/> }/>
-              <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <TwitterLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="https://twitter.com/simango_eusebio" icon={ <TwitterLogo className="w-12 h-12"/> }/>
               <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <LinkedinLogo className="w-12 h-12"/> }/>
-              <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <InstagramLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="http://instagram.com/eusimangoofficial" icon={ <InstagramLogo className="w-12 h-12"/> }/>
               <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <YoutubeLogo className="w-12 h-12"/> }/>
-              <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <GoogleLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="mailto:eusebiosimango14@gmail.com" icon={ <GoogleLogo className="w-12 h-12"/> }/>
             </div>
           </div>
           <div className="md:mt-20 md:w-[calc(100vw-380px)]">
             <p className="text-gray-700 ">
-              Meu nome é <a href={"https://github.com/EusebioSimango"} className="bg-gray-1000">Eusébio Simango</a>, e eu sou um adolescente moçambicano apaixonado por programação, tecnologia e ciência. Neste blog vou falar sobre a minha vida, dificuldades que encontrei na minha vida pessoal e profissional, toda minha jornada no mundo do desenvolvimeno de software.
+              Meu nome é <a href={"https://github.com/EusebioSimango"} className="text-gray-900">Eusébio Simango</a>, e eu sou um adolescente moçambicano apaixonado por programação, tecnologia e ciência. Neste blog vou falar sobre a minha vida, dificuldades que encontrei na minha vida pessoal e profissional, toda minha jornada no mundo do desenvolvimeno de software.
             </p>
           </div>
         </div>
-        <Link href={"/"}>Blog</Link>
       </div>
     </>
   );
