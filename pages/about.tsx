@@ -5,15 +5,19 @@ import { GithubLogo, TwitterLogo, LinkedinLogo, InstagramLogo, YoutubeLogo, Goog
 import Navbar from './../components/Navbar'
 import SocialLink from './../components/SocialLink'
 import Avatar from './../images/me.png'
+import MetaData from '../components/MetaData';
 
 export default function About(){
   return (
     <>
       <Navbar />
       <div className="pt-20 px-4">
-        <Head>
-          <title>Giniuss | Sobre</title>
-        </Head>
+        <MetaData metaData={{
+            title: 'Giniuss | Sobre',
+            author: 'Eusébio Simango',
+            description: 'Sobre Eusébio Simango',
+            keywords: ['adolscente', 'blog', 'eusebio simango', 'programador', 'nerd', 'ciencia', 'tecnologia']
+        }} />
         <h1 className='text-gray-1000 text-3xl mb-10'>Sobre</h1>
         <div className="flex flex-wrap">
           <div className="flex flex-col items-center justify-center gap-2 w-[100vw] md:w-[330px]">

@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply scroll-smooth
+}
+
+* {
+    @apply duration-500
+}
+
+body {
+   @apply dark:bg-darkBg
+}
+
 .active {
 	@apply -left-[15px] absolute
+}
+
+.postContent blockquote {
+    @apply border-l-4 border-link p-2 bg-zinc-100 rounded dark:bg-zinc-800 dark:text-white
+}
+
+.postContent a {
+    @apply text-link dark:text-darkLink
+}
+
+.postContent p {
+    @apply my-5 text-lg leading-relaxed
+}
+
+.postContent ul {
+    @apply list-disc py-2 px-5 
+}
+
+.postContent ol {
+    @apply list-decimal py-2 px-5 
+}
+
+.postContent li {
+    @apply leading-8
+}
+
+.postContent img {
+    @apply max-h-[70vh] w-auto mx-auto my-4
 }

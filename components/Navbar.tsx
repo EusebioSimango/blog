@@ -11,7 +11,6 @@ export default function Navbar(){
         menu.classList.add('active')
     else 
         menu.classList.remove('active')
-    console.log('activo: ', isMenuActive, menu)
   }, [isMenuActive])
 
   const toggleMenu = () => {
@@ -20,12 +19,12 @@ export default function Navbar(){
 
   console.log("Renderizou")
   return (
-    <div className="absolute p-4 isDarkMode={isDarkMode}left-0 top-0 w-[100vw] text-center">
+    <div className="absolute p-4 dark:text-white left-0 top-0 w-[100vw] text-center duration-500">
       <List 
         onClick={toggleMenu}
         className='w-8 h-8 absolute top-[14px] left-2 cursor-pointer'
       />
-      <h1 className="text-red-500 text-2xl">GINIUSS</h1>
+      <h1 className="text-4xl dark:text-darkLink text-link leading-tight">GINIUSS</h1>
       <Menu />
     </div>
   )

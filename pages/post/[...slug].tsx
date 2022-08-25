@@ -1,6 +1,7 @@
 import React from 'react'
 import { gql } from '@apollo/client'
 import  client  from '../../apolloClient'
+import Navbar from './../../components/Navbar'
 import { NextPage } from 'next'
 import { IPosts } from '..'
 
@@ -23,9 +24,10 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
 	console.log(post.postContent)
 	return (
 		<div>
-			<div>
+            <Navbar />
+			<div className="pt-[100px] p-4">
 				{post.title}
-				<div dangerouslySetInnerHTML={{__html: post.postContent.html}} />
+				<div className="postContent" dangerouslySetInnerHTML={{__html: post.postContent.html}} />
 			</div>
 		</div>
 	)
