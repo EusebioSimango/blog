@@ -15,7 +15,7 @@ body {
 }
 
 .active {
-	@apply -left-[15px] absolute
+	@apply -left-[15px] 
 }
 
 .postContent blockquote {
@@ -27,7 +27,7 @@ body {
 }
 
 .postContent p {
-    @apply my-5 text-lg leading-relaxed
+    @apply my-5 text-lg leading-relaxed dark:text-white
 }
 
 .postContent ul {

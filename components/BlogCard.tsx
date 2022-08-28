@@ -5,7 +5,6 @@ import { format } from "date-fns"
 import ptBR from "date-fns/locale/pt-BR"
 
 export interface BlogCardProps {
-  Key: number,
   post: PostType
 }
 
@@ -20,7 +19,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ Key, post }) => {
   })
 
   return (
-    <div key={Key}>
+    <div>
       <Link href={`/post/${post.slug}`}>
         <a className="block">
           <span className='text-darkBg font-bold dark:text-link text-2xl'>{ post.title }</span>
@@ -28,7 +27,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ Key, post }) => {
       </Link>
 
       <p className="text-zinc-600">{ publishedDateFormatted.toUpperCase() }</p>
-      <p className="mt-2">{ description.substring(0, LIMIT).replaceAll("\\n", "") + dotsOrEmpty }</p>
+      <p className="mt-2 dark:text-white">{ description.substring(0, LIMIT).replaceAll("\\n", "") + dotsOrEmpty }</p>
       <div className="my-2 w-full border-b-2 border-zinc-600 rounded-sm p-0">
         <Link href={`/post/${post.slug}`}>
           <a className='block'>

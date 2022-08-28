@@ -3,7 +3,7 @@ import React from 'react';
 import { GithubLogo, TwitterLogo, LinkedinLogo, InstagramLogo, YoutubeLogo, GoogleLogo } from 'phosphor-react'
 import Navbar from './../components/Navbar'
 import SocialLink from './../components/SocialLink'
-import Avatar from './../images/me.png'
+import Avatar from './../public/images/me.png'
 import MetaData from '../components/MetaData';
 
 export default function About(){

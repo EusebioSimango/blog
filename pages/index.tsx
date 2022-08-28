@@ -54,7 +54,7 @@ const  Home: NextPage<IPosts > = ({posts}) => {
 				{posts.map( (post, i) => {
 					return (
 						<BlogCard 
-							Key={i}
+							key={i}
 							post={post} 
 						/>
 					)
