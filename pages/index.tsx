@@ -4,9 +4,39 @@ import  client  from '../apolloClient'
 import { NextPage } from 'next'
 import { PostType } from './post/[...slug]'
 import MetaData from '../components/MetaData'
+import BlogCard from '../components/BlogCard'
 
 export interface IPosts {
 	posts:	PostType[]
+}
+
+const GET_ALL_POSTS = gql`
+	query { 
+		posts {
+			title
+			slug
+			postDate
+			coverImage {
+				url
+			}
+			postContent {
+				html
+				text
+			}
+		}
+	}
+`
+
+export async function getStaticProps(){
+	const {data} = await client.query<IPosts>({
+		query: GET_ALL_POSTS
+	})
+	const { posts } = data
+	return {
+		props: {
+			posts
+		}
+	}
 }
 
 const  Home: NextPage<IPosts > = ({posts}) => {
@@ -21,36 +51,17 @@ const  Home: NextPage<IPosts > = ({posts}) => {
 			}} />
 			<Navbar />
 			<div className='pt-20 px-4'>
-				{posts.map( (post, i) => <a href={`/post/${post.slug}`} key={i}>{post.title}</a>)}
+				{posts.map( (post, i) => {
+					return (
+						<BlogCard 
+							Key={i}
+							post={post} 
+						/>
+					)
+				})}
 			</div>
 		</div>    
 	)
-}
-
-export async function getStaticProps(){
-	const {data} = await client.query<IPosts>({
-		query: gql`
-			query { 
-			  posts {
-			    title
-			    slug
-			    postDate
-			    coverImage {
-			      url
-			    }
-			    postContent {
-			      html
-			    }
-			  }
-			}
-		`
-	})
-	const { posts } = data
-	return {
-		props: {
-			posts
-		}
-	}
 }
 
 export default Home
