@@ -10,11 +10,13 @@ import MetaData from '../../components/MetaData'
 export type PostType = {
 	title: string,
 	slug: string,
+	postDate: string,
 	coverImage: {
 		url: string,
 	}
 	postContent: {
-		html: string
+		html: string,
+		text: string,
 	}
 }
 
@@ -41,6 +43,7 @@ const GET_POST_BY_SLUG_QUERY = gql`
 			}
 			postContent {
 				html
+				text
 			}
 		}
 	}
@@ -77,7 +80,7 @@ export async function getStaticProps({ params }){
 }
 
 const  PostPage: NextPage<PostPageProps> = ({post}) => {
-
+	console.log(post)
 	return (
 		<div>
 			<MetaData metaData={{

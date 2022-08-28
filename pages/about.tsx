@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image'
 import React from 'react';
 import { GithubLogo, TwitterLogo, LinkedinLogo, InstagramLogo, YoutubeLogo, GoogleLogo } from 'phosphor-react'
@@ -28,11 +27,11 @@ export default function About(){
             <h1 className="text-gray-900">Eusébio Simango</h1>
             <p className="text-gray-400">Web Developer</p>
             <div className="flex flex-row flex-nowrap gap-3 mb-4">
-              <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <GithubLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="https://github.com/EusebioSimango" icon={ <GithubLogo className="w-12 h-12"/> }/>
               <SocialLink  url="https://twitter.com/simango_eusebio" icon={ <TwitterLogo className="w-12 h-12"/> }/>
-              <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <LinkedinLogo className="w-12 h-12"/> }/>
-              <SocialLink  url="http://instagram.com/eusimangoofficial" icon={ <InstagramLogo className="w-12 h-12"/> }/>
-              <SocialLink  url="https://www.gitbub.com/EusebioSimango" icon={ <YoutubeLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="https://www.linkedin.com/in/eus%C3%A9bio-simango-36b994233/" icon={ <LinkedinLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="http://instagram.com/eusimangooficial" icon={ <InstagramLogo className="w-12 h-12"/> }/>
+              <SocialLink  url="https://www.youtube.com/channel/UCMS6crz1z9pK6AHoLzDvO0A" icon={ <YoutubeLogo className="w-12 h-12"/> }/>
               <SocialLink  url="mailto:eusebiosimango14@gmail.com" icon={ <GoogleLogo className="w-12 h-12"/> }/>
             </div>
           </div>

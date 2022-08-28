@@ -19,7 +19,7 @@ export default function Navbar(){
 
   console.log("Renderizou")
   return (
-    <div className="absolute p-4 dark:text-white left-0 top-0 w-[100vw] text-center duration-500">
+    <div className="fixed p-4 dark:text-white left-0 top-0 w-[100vw] text-center duration-500">
       <List 
         onClick={toggleMenu}
         className='w-8 h-8 absolute top-[14px] left-2 cursor-pointer'
