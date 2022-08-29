@@ -26,7 +26,7 @@ console.log('toggling theme')
   return (
     <div 
       id="menu"
-      className={`flex flex-col gap-5  bg-gray-900 dark:bg-white fixed top-[54px] -left-[132px] duration-900 transition-all py-5 px-10 rounded-lg items-center`}
+      className={`flex flex-col gap-5  bg-gray-900 dark:bg-white fixed top-[54px] -left-[132px] duration-900 transition-all py-5 px-10 rounded-lg items-center z-50`}
     >
       <a href={"/"} className="text-white text-bold text-xl dark:text-darkBg">Blog</a>
       <a href={"/about"} className="text-white text-xl dark:text-darkBg">Sobre</a>
