@@ -19,9 +19,9 @@ export default function About(){
         }} />
         <h1 className='text-gray-900 text-5xl border-b pb-2 border-link dark:border-white dark:text-white mb-10'>Sobre</h1>
         <div className="flex flex-wrap">
-          <div className="flex flex-col items-center justify-center gap-2 w-[100vw] md:w-[330px] z-10">
+          <div className="flex flex-col items-center justify-center gap-2 w-[100vw] md:w-[330px] z-0">
             <div className='rounded-full w-[200px] h-[200px] overflow-hidden'>
-              <Image className='w-full h-full' alt="Eusebio's Avatar" src={Avatar}/>
+              <Image className='w-full h-full z-0' alt="Eusebio's Avatar" src={Avatar}/>
             </div>
 
             <h1 className="text-gray-900 dark:text-white">Eusébio Simango</h1>
