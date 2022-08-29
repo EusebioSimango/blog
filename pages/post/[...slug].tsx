@@ -88,6 +88,8 @@ export async function getStaticProps({ params }){
 
 const  PostPage: NextPage<PostPageProps> = ({post}) => {
     var publishedDateFormatted = ""
+    const text = post.postContent.text
+    const description = text.substring(0, 100).replaceAll("\\n", "")
 
     if (post) {
         var publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM' - 'k'h'", {
@@ -103,7 +105,7 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
 		<div>
 			<MetaData metaData={{
 				title: `${ post.title }`,
-				description: `${ post.postContent }`,
+				description: `${ description }`,
 				author: 'Eusébio Simango',
 				keywords: ['adolscente', 'blog', 'eusebio simango', 'programador', 'tecnologia'],
 			}} />
