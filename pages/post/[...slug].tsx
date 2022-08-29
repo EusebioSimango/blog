@@ -4,6 +4,7 @@ import  client  from '../../apolloClient'
 import Navbar from './../../components/Navbar'
 import { NextPage } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { IPosts } from '..'
 import MetaData from '../../components/MetaData'
 import { format } from "date-fns"

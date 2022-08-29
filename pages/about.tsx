@@ -17,14 +17,14 @@ export default function About(){
             description: 'Sobre Eusébio Simango',
             keywords: ['adolscente', 'blog', 'eusebio simango', 'programador', 'nerd', 'ciencia', 'tecnologia']
         }} />
-        <h1 className='text-gray-1000 text-3xl mb-10'>Sobre</h1>
+        <h1 className='text-gray-900 text-5xl border-b pb-2 border-link dark:border-white dark:text-white mb-10'>Sobre</h1>
         <div className="flex flex-wrap">
           <div className="flex flex-col items-center justify-center gap-2 w-[100vw] md:w-[330px]">
             <div className='rounded-full w-[200px] h-[200px] overflow-hidden'>
               <Image className='w-full h-full' alt="Eusebio's Avatar" src={Avatar}/>
             </div>
 
-            <h1 className="text-gray-900">Eusébio Simango</h1>
+            <h1 className="text-gray-900 dark:text-white">Eusébio Simango</h1>
             <p className="text-gray-400">Web Developer</p>
             <div className="flex flex-row flex-nowrap gap-3 mb-4">
               <SocialLink  url="https://github.com/EusebioSimango" icon={ <GithubLogo className="w-12 h-12"/> }/>
@@ -37,7 +37,7 @@ export default function About(){
           </div>
           <div className="md:mt-20 md:w-[calc(100vw-380px)]">
             <p className="text-gray-700 ">
-              Meu nome é <a href={"https://github.com/EusebioSimango"} className="text-gray-900">Eusébio Simango</a>, e eu sou um adolescente moçambicano apaixonado por programação, tecnologia e ciência. Neste blog vou falar sobre a minha vida, dificuldades que encontrei na minha vida pessoal e profissional, toda minha jornada no mundo do desenvolvimeno de software.
+              Meu nome é <strong>Eusébio Simango</strong>, e eu sou um adolescente moçambicano apaixonado por programação, tecnologia e ciência. Neste blog vou falar sobre a minha vida, dificuldades que encontrei na minha vida pessoal e profissional, toda minha jornada no mundo do desenvolvimeno de software.
             </p>
           </div>
         </div>

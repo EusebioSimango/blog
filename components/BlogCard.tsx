@@ -8,7 +8,7 @@ export interface BlogCardProps {
   post: PostType
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ Key, post }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   const { text: description } = post.postContent
   const LIMIT = 300
   const isAboveLimit = description.length > LIMIT
