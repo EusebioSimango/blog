@@ -111,7 +111,7 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
       <Navbar /> 
         { post ? (
 			<div className="pt-[100px] p-4">
-				<div className="text-4xl mb-2 text-center">{ post.title }</div>
+				<div className="text-4xl mb-2 text-center dark:text-white text-darkBg">{ post.title }</div>
                 <span className="text-zinc-400 mb-4 text-center">{ publishedDateFormatted.toUpperCase() }</span>
 				<div className="postContent" dangerouslySetInnerHTML={{__html: post.postContent.html}} />
 			</div> ) : (
@@ -119,7 +119,7 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
                     <Image src={ loadingImg } width={100} height={100} alt="Loading" />
                 </div>
             )}
-        <span className="underline text-link font-bold dark:text-darkLink"><Link href="/">Veja outros posts</Link></span>
+        <span className="underline text-link font-bold dark:text-darkLink px-4 py-6"><Link href="/">Veja outros posts</Link></span>
         <div className="w-full h-1 bg-slate-400 rounded"></div>
 		</div>
 	)
