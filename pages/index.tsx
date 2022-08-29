@@ -29,13 +29,14 @@ const GET_ALL_POSTS = gql`
 
 export async function getStaticProps(){
 	const {data} = await client.query<IPosts>({
-		query: GET_ALL_POSTS
+		query: GET_ALL_POSTS,
 	})
 	const { posts } = data
 	return {
 		props: {
 			posts
-		}
+		},
+		revalidate: 60 * 60 * 4,
 	}
 }
 
