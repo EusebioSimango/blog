@@ -92,7 +92,7 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
     const description = text.substring(0, 100).replaceAll("\\n", "")
 
     if (post) {
-        var publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM' - 'k'h'", {
+        var publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM', 'YYYY' - 'k'h'", {
             locale: ptBR,
         })
     }
