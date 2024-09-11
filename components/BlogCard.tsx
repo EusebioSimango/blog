@@ -14,7 +14,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   const isAboveLimit = description.length > LIMIT
   const dotsOrEmpty = isAboveLimit ? "..." : ""
 
-  const publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM'", {
+  const publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM', 'yyyy", {
     locale: ptBR
   })
 
