@@ -51,7 +51,7 @@ const  Home: NextPage<IPosts > = ({posts}) => {
 				keywords: ['adolscente', 'blog', 'eusebio simango', 'programador', 'nerd', 'ciencia', 'tecnologia']
 			}} />
 			<Navbar />
-			<div className='pt-20 px-4'>
+			<div className='pt-20 px-4 container mx-auto'>
 				{posts.map( (post, i) => {
 					return (
 						<BlogCard 

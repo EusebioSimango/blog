@@ -17,7 +17,6 @@ export default function Navbar(){
     setIsMenuActive(!isMenuActive)
   }
 
-  console.log("Renderizou")
   return (
     <div className="fixed p-4 dark:text-white left-0 top-0 w-[100vw] dark:bg-darkBg bg-white text-center duration-500">
       <List 

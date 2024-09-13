@@ -92,7 +92,7 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
     const description = text.substring(0, 100).replaceAll("\\n", "")
 
     if (post) {
-        var publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM', 'yyyy' - 'k'h'", {
+        var publishedDateFormatted = format(new Date(post.postDate), "EEE' - 'd' de 'MMMM', 'yyyy'", {
             locale: ptBR,
         })
     }
@@ -112,7 +112,7 @@ const  PostPage: NextPage<PostPageProps> = ({post}) => {
 
       <Navbar /> 
         { post ? (
-			<div className="pt-[100px] p-4">
+			<div className="pt-[100px] p-4 container mx-auto">
 				<div className="text-4xl mb-2 text-center dark:text-white text-darkBg">{ post.title }</div>
                 <span className="text-zinc-400 mb-4 text-center">{ publishedDateFormatted.toUpperCase() }</span>
 				<div className="postContent" dangerouslySetInnerHTML={{__html: post.postContent.html}} />
